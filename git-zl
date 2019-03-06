@@ -24,4 +24,4 @@ $ git merge dev 合并dev到master
 $ git branch -d dev 删除dev分支
 dev做修改并提交 master修改并提交 再合并 需要解决冲突 git status告诉哪里冲突 git log --graph --pretty=oneline --abbrev-commit看分支的合并情况
 $ git merge --no-ff -m "merge with no-ff" dev 一般master分支稳定 在dev分支上工作
-等待整理——2019/3/6
+未完，等待整理——2019/3/6
