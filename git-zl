@@ -1,0 +1,26 @@
+$ mkdir learngit
+$ cd learngit 
+$ git init 创建库 
+$ vi 1.txt 添加一个测试1.txt
+    工作区(workdir)---版本库（暂存区stage + head->master）
+$ git add 1.txt 添加**修改**到暂存区
+$ git commit -m "add 1.txt" 提交
+$ git status 查看工作区状态
+$ git diff 如果工作区有修改，查看修改内容
+$ git log 查看提交历史，可以从这里得到commit_id
+$ git reflog 查看命令历史，回退之后从这里得到未来的ci
+$ git reset --hard commit_id 回退，修改HEAD指向
+$ git rm 1.txt 删除
+$ git commit -m ""
+$ git checkout -- 1.txt 使用版本库的替换，“一键还原”
+$ git remote add origin git@github.com:yefeiye/learngit.git
+$ git push -u origin master 第一次推送到远程
+$ git push origin master
+$ git checkout -b dev 创建并切换分支dev 相当于git branch dev + git checkout dev
+$ git branch 查看分支
+#修改1.txt并提交
+$ git branch master
+$ git merge dev 合并dev到master
+$ git branch -d dev 删除dev分支
+dev做修改并提交 master修改并提交 再合并 需要解决冲突 git status告诉哪里冲突 git log --graph --pretty=oneline --abbrev-commit看分支的合并情况
+$ git merge --no-ff -m "merge with no-ff" dev 一般master分支稳定 在dev分支上工作
